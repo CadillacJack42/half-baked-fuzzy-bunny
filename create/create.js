@@ -13,9 +13,16 @@ form.addEventListener('submit', async(e) => {
     e.preventDefault();
 
     // get the name and family id from the form
-
+    const data = new FormData(form);
+    const bunnyName = data.get('bunny-name');
+    const familyId = data.get('family-id');
     // use createBunny to create a bunny with this name and family id
-    
+    const bunny = {
+        name: bunnyName,
+        family_id: familyId
+    };
+    console.log(bunny);
+    await createBunny(bunny);
     form.reset();
 });
 
@@ -34,12 +41,6 @@ window.addEventListener('load', async() => {
         optionEl.textContent = family.name;
         familyDropdown.append(optionEl);
     }
-
-    // create an option tag
-
-    // set the option's value and text content
-
-    // and append the option to the select
 });
 
 
