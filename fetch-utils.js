@@ -1,7 +1,9 @@
+import { renderFamilies } from "./render-utils/render.js";
+
 const SUPABASE_URL = 'https://gxwgjhfyrlwiqakdeamc.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNjQxMTMxMiwiZXhwIjoxOTUxOTg3MzEyfQ.PHekiwfLxT73qQsLklp0QFEfNx9NlmkssJFDnlvNIcA';
 
-const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+export const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getUser() {
     return client.auth.session();
@@ -39,6 +41,20 @@ export async function createBunny(bunny) {
     return checkError(response);    
 }
 
+export async function displayFamilies() {
+    const familiesEl = document.querySelector('.families-container');
+    // fetch families from supabase
+    const families = await getFamilies();
+    console.log(families);
+
+    // clear out the familiesEl
+    familiesEl.textContent = '';
+
+    for (let family of families) {
+        const familyEl = renderFamilies(family);
+        familiesEl.append(familyEl);
+    }
+}
 
 
 export async function checkAuth() {

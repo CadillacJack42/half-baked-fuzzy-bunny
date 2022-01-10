@@ -1,4 +1,4 @@
-import { getFamilies } from '../fetch-utils.js';
+
 import { listenerGenerator } from './listenerGenerator.js';
 
 export const renderFamilies = (family) => {
@@ -20,10 +20,9 @@ export const renderFamilies = (family) => {
     return familyEl;
 };
 
-const renderBunny = (bunny) => {
+export const renderBunny = (bunny) => {
     const familyBunnies = document.createElement('p');
     familyBunnies.classList.add('bunnies');
     familyBunnies.textContent = bunny.name;
-
     return familyBunnies;
 };

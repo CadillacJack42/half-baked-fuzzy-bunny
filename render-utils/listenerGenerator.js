@@ -1,6 +1,6 @@
-import { displayFamilies } from '../families/families.js';
-import { deleteBunny } from '../fetch-utils.js';
-// import { reRender } from './render.js';
+// import { displayFamilies } from '../families/families.js';
+import { deleteBunny, displayFamilies } from '../fetch-utils.js';
+
 
 export const listenerGenerator = (domEl, id) => {
     domEl.addEventListener('click', async() => {
