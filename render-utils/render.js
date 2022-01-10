@@ -19,6 +19,6 @@ export const renderFamilies = (family) => {
         familyEl.append(familyBunnies);
         listenerGenerator(familyBunnies, bunny.id);
     }
-
+    
     return familyEl;
 };
