@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-// import { client } from '../fetch-utils.js';
+
 import { renderBunny } from '../render-utils/render.js';
 
 

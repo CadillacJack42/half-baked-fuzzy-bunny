@@ -21,7 +21,6 @@ form.addEventListener('submit', async(e) => {
         name: bunnyName,
         family_id: familyId
     };
-    console.log(bunny);
     await createBunny(bunny);
     form.reset();
 });
