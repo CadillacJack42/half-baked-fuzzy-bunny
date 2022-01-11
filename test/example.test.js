@@ -30,7 +30,6 @@ test('should take in an object and return a DOM element with the object values',
     const expected = `<p class="bunnies">JOJO</p>`;
 
     const actual = renderBunny(bunny);
-    console.log(actual);
 
     expect.equal(actual.outerHTML, expected);
 });
