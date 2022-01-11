@@ -10,15 +10,15 @@ const test = QUnit.test;
 
 test('time to test a function', async(expect) => {
 
-    const testUser = await signInUser('testUser@test.com', 'test1234');
+    await signInUser('testUser@test.com', 'test1234');
     
     const expected = [
         {
-            "created_at": "Date() object",
-            "family_id": 1,
-            "id": "dynamically generated number",
-            "name": "Mojo",
-            "user_id": "88551885-f251-491a-8ef9-1e2ef0d7254b"
+            'created_at': 'Date() object',
+            'family_id': 1,
+            'id': 'dynamically generated number',
+            'name': 'Mojo',
+            'user_id': '88551885-f251-491a-8ef9-1e2ef0d7254b'
         }
     ];
     
