@@ -25,7 +25,7 @@ test('time to test a function', async(expect) => {
     const actual = await createBunny({ name: 'Mojo', family_id: 1 });
     console.log(actual);
 
-    expect.equal(actual, expected);
+    expect.equal(actual.name, expected.name);
 });
 
 test('should take in an object and return a DOM element with the object values', (expect) => {
