@@ -1,11 +1,11 @@
-import supabase from '@supabase/supabase-js';
+import { createClient } from '@supabase/supabase-js';
 
 import { renderFamilies } from './render-utils/render.js';
 
 export const SUPABASE_URL = 'https://gxwgjhfyrlwiqakdeamc.supabase.co';
 export const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNjQxMTMxMiwiZXhwIjoxOTUxOTg3MzEyfQ.PHekiwfLxT73qQsLklp0QFEfNx9NlmkssJFDnlvNIcA';
 
-export const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+export const client = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getUser() {
     return client.auth.session();
