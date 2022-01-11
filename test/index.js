@@ -2,8 +2,7 @@
 
 // include jsdom for DOM use in tests on travis
 const jsdom = require('jsdom');
-// import { SUPABASE_KEY, SUPABASE_URL } from '../fetch-utils.js'
-// const  = require('../fetch-utils.js');
+
 const { JSDOM } = jsdom;
 const { window } = new JSDOM(``, {
     url: 'http://localhost:5500'
@@ -18,8 +17,3 @@ global.URL = window.URL;
 
 require = require('esm')(module);
 module.exports = require('./tests.js');
-
-const SUPABASE_URL = 'https://gxwgjhfyrlwiqakdeamc.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNjQxMTMxMiwiZXhwIjoxOTUxOTg3MzEyfQ.PHekiwfLxT73qQsLklp0QFEfNx9NlmkssJFDnlvNIcA';
-
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);

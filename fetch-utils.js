@@ -1,3 +1,5 @@
+import supabase from '@supabase/supabase-js';
+
 import { renderFamilies } from './render-utils/render.js';
 
 export const SUPABASE_URL = 'https://gxwgjhfyrlwiqakdeamc.supabase.co';
