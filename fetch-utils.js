@@ -1,4 +1,3 @@
-import supabase from '@supabase/supabase-js';
 
 import { renderFamilies } from './render-utils/render.js';
 
