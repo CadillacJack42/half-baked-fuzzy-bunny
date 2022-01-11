@@ -19,7 +19,7 @@ global.URL = window.URL;
 require = require('esm')(module);
 module.exports = require('./tests.js');
 
-export const SUPABASE_URL = 'https://gxwgjhfyrlwiqakdeamc.supabase.co';
-export const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNjQxMTMxMiwiZXhwIjoxOTUxOTg3MzEyfQ.PHekiwfLxT73qQsLklp0QFEfNx9NlmkssJFDnlvNIcA';
+const SUPABASE_URL = 'https://gxwgjhfyrlwiqakdeamc.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNjQxMTMxMiwiZXhwIjoxOTUxOTg3MzEyfQ.PHekiwfLxT73qQsLklp0QFEfNx9NlmkssJFDnlvNIcA';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
