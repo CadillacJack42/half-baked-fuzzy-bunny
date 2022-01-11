@@ -24,7 +24,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm i eslint esm jsdom
+    - run: npm i eslint esm jsdom @supabase/supabase-js
     - run: npx eslint .
     - run: npx qunit test/index.js
       env:

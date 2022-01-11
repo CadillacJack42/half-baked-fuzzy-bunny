@@ -38,7 +38,7 @@ export async function createBunny(bunny) {
             name: bunny.name,
             family_id: bunny.family_id
         }]);
-        
+    // console.log(client);
     return checkError(response);    
 }
 

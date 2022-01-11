@@ -3,21 +3,28 @@
 
 
 import { renderBunny } from '../render-utils/render.js';
+import { createBunny, signInUser } from '../fetch-utils.js';
 
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+test('time to test a function', async(expect) => {
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
+    const testUser = await signInUser('testUser@test.com', 'test1234');
+    
+    const expected = [
+        {
+            "created_at": "Date() object",
+            "family_id": 1,
+            "id": "dynamically generated number",
+            "name": "Mojo",
+            "user_id": "88551885-f251-491a-8ef9-1e2ef0d7254b"
+        }
+    ];
+    
+    const actual = await createBunny({ name: 'Mojo', family_id: 1 });
+    console.log(actual);
+
     expect.equal(actual, expected);
 });
 
