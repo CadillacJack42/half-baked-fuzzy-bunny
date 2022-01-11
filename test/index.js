@@ -4,7 +4,7 @@
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
-const { window } = new JSDOM('<!DOCTYPE html><html><head>    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script><title>Foo</title></head><body><div></div></body></html>', {
+const { window } = new JSDOM(``, {
     url: 'http://localhost:5500'
 });
 global.window = window;
