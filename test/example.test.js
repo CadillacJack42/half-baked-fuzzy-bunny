@@ -21,7 +21,7 @@ test('time to test a function', (expect) => {
     expect.equal(actual, expected);
 });
 
-test.skip('should take in an object and return a DOM element with the object values', (expect) => {
+test('should take in an object and return a DOM element with the object values', (expect) => {
     const bunny = {
         name: 'JOJO',
         family_id: 1
